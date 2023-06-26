@@ -14,7 +14,10 @@ h1{
 .contents1{
     font-size : 20px;
     font-weight : lighter;
+    color : black;
 }
+
+
 .intro_bg{
     background-image: url("bg.png");
     background-size: cover;
@@ -68,20 +71,44 @@ h1{
     top:-66px;
     display: flex;
     width : 1280px;
-    background:blue;
+    background :white;
     margin : auto;
+    box-shadow: -5px 10px 10px rgba(0,0,0,0.5);
 }
 .amount > li {
     flex : 1;
     height: 132px;
-    background : red;
+    background : rgb(85, 0, 255);
 }
 .amount > li > div {
     text-align: center;
-    background: green;
     margin-top: 37px;
     height: 57px;
 }
 .amount >li:not(:last-child)>div{
-    border-right : 1px solid gray;
+    border-right : 1px solid #E1E1E1;
+}
+.amount_txt{
+    font-size : 20px;
+    font-weight : lighter;
+    color : white;
+}
+.amount_txt2{
+    font-size: 24px;
+    color : white;
+}
+/* main_txt0 */
+.main_txt0{
+    width : 100% ;
+    height : 601px;
+    margin-top : -132px;
+    background-color: #f1f2f3;
+}
+.main_txt0 > h1 {
+    padding-top: 116px;
+    text-align : center;
+}
+.main_txt0 > .contents1 {
+    text-align: center;
+
 }
