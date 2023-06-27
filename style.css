@@ -121,3 +121,14 @@ footer {
 .footer_logo{
     padding:40px;
 }
+
+/* 호버 효과 */
+
+.nav li:hover {
+    background: #f1f1f1;}
+    
+
+.nav li:hover a {
+    color: #000;
+    
+}

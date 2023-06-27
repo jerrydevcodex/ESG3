@@ -20,6 +20,7 @@ body{
     margin-bottom: 10px;}
 
 
+
 h1{
     font-size : 48px;
     font-weight: 100;
@@ -60,6 +61,24 @@ h1{
 .nav > li > a {
     color : #000;
 }
+
+
+/* 호버 효과 */
+
+.nav li:hover {
+    background: #f1f1f1;}
+    
+
+.nav li:hover a {
+    color: #000;
+    
+}
+
+
+
+
+
+
 .company_txt{
     width : 100%;
     text-align: center;
@@ -87,11 +106,9 @@ h1{
 .about_detail{
     margin-top: 30px;
     }
-    footer {
-        width : 100% ;
-        margin-top: 125px;
-        background : #fbf5f5;}
-    
+
+
+
     .footer_list{
         display: flex;
         justify-content: center;
@@ -107,3 +124,4 @@ h1{
     .footer_logo{
         padding:40px;
     }
+
