@@ -111,6 +111,7 @@ h1{
 
     .footer_list{
         display: flex;
+        margin-top: 50px;
         justify-content: center;
         align-items: center;
         list-style: none;
