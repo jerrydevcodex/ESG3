@@ -7,6 +7,12 @@
     padding : 0px;
     color : #000;
 }
+body{
+    background-image: url(bg.png);
+    background-size: cover;
+    background-repeat: none;
+    background-position: center center;}
+
 h1{
     font-size : 48px;
     font-weight: 100;
@@ -49,7 +55,7 @@ h1{
 }
 .intro_txt{
     width : 100%;
-    margin : 125px auto 231px auto;
+    margin : 110px auto 110px auto;
     text-align: center;
 }
 
@@ -67,8 +73,6 @@ h1{
 }
 
 .amount{
-    position : relative;
-    top:-66px;
     display: flex;
     width : 1280px;
     background :white;
@@ -78,7 +82,7 @@ h1{
 .amount > li {
     flex : 1;
     height: 132px;
-    background : rgb(85, 0, 255);
+    background : rgb(119, 54, 250);
 }
 .amount > li > div {
     text-align: center;
@@ -97,18 +101,23 @@ h1{
     font-size: 24px;
     color : white;
 }
-/* main_txt0 */
-.main_txt0{
+footer {
     width : 100% ;
-    height : 601px;
-    margin-top : -132px;
-    background-color: #f1f2f3;
-}
-.main_txt0 > h1 {
-    padding-top: 116px;
-    text-align : center;
-}
-.main_txt0 > .contents1 {
-    text-align: center;
+    margin-top: 125px;
+    background : #fbf5f5;}
 
+.footer_list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.footer_content{
+    margin-left: 20px;
+    text-align: right;
+}
+
+.footer_logo{
+    padding:40px;
 }

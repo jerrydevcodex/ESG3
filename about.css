@@ -87,3 +87,23 @@ h1{
 .about_detail{
     margin-top: 30px;
     }
+    footer {
+        width : 100% ;
+        margin-top: 125px;
+        background : #fbf5f5;}
+    
+    .footer_list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+    }
+    
+    .footer_content{
+        margin-left: 20px;
+        text-align: right;
+    }
+    
+    .footer_logo{
+        padding:40px;
+    }
