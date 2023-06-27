@@ -1,7 +1,8 @@
 
 import './App.css';
-import './style.css'
-import Nav from './components/Nav'
+import './style.css';
+import Nav from './components/Nav';
+import Notice from './components/Notice';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home/>}/>
+          <Route path="/notice" element={<Notice/>}/>
           <Route path="/about" element={<About/>}/>
           <Route path="/service" element={<Home/>}/>
           <Route path="/contact" element={<Home/>}/>
@@ -50,3 +52,4 @@ const About = () => {
     </div>
   )
 }
+

@@ -7,6 +7,7 @@ const Nav = () => {
                 <ul class="nav">
                     <img class = "logo" src={logo} alt="logo"/>
                     <li><Link to='/'>HOME</Link></li>
+                    <li><Link to='/notice'>NOTICE</Link></li>
                     <li><Link to='/about'>ABOUT</Link></li>
                     <li><Link>SERVICE</Link></li>
                     <li><Link>CONTACT</Link></li>
@@ -16,3 +17,4 @@ const Nav = () => {
 }
 
 export default Nav;
+
