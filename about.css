@@ -7,6 +7,19 @@
     padding : 0px;
     color : #000;
 }
+body{
+    background-image: url(bg.png);
+    background-size: cover;
+    background-repeat: none;
+    background-position: center center;
+}
+.logo{
+    float: left;
+    margin-right: 450px;
+    margin-top : 20px;
+    margin-bottom: 10px;}
+
+
 h1{
     font-size : 48px;
     font-weight: 100;
@@ -18,13 +31,13 @@ h1{
 }
 
 
-.intro_bg{
+/*.intro_bg{
     background-image: url("bg.png");
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     height: 600px;    
-}
+}*/
 .header{
     display : flex;
     width : 1280px ;
@@ -47,68 +60,30 @@ h1{
 .nav > li > a {
     color : #000;
 }
-.intro_txt{
+.company_txt{
     width : 100%;
-    margin : 125px auto 231px auto;
     text-align: center;
-}
+    font-weight: lighter;
+    margin-top: 20px;
+    }
 
-.intro_txt > h1,
-.intro_txt > h4{
-    color : #000;
-}
-
-
-.logo{
-    float: left;
-    margin-right: 450px;
-    margin-top : 20px;
-    margin-bottom: 10px;
-}
-
-.amount{
-    position : relative;
-    top:-66px;
-    display: flex;
-    width : 1280px;
-    background :white;
+.company_img {
+    width :  100%;
     margin : auto;
-    box-shadow: -5px 10px 10px rgba(0,0,0,0.5);
+    margin-top: 30px;
 }
-.amount > li {
-    flex : 1;
-    height: 132px;
-    background : rgb(85, 0, 255);
-}
-.amount > li > div {
-    text-align: center;
-    margin-top: 37px;
-    height: 57px;
-}
-.amount >li:not(:last-child)>div{
-    border-right : 1px solid #E1E1E1;
-}
-.amount_txt{
-    font-size : 20px;
-    font-weight : lighter;
-    color : white;
-}
-.amount_txt2{
-    font-size: 24px;
-    color : white;
-}
-/* main_txt0 */
-.main_txt0{
-    width : 100% ;
-    height : 601px;
-    margin-top : -132px;
-    background-color: #f1f2f3;
-}
-.main_txt0 > h1 {
-    padding-top: 116px;
-    text-align : center;
-}
-.main_txt0 > .contents1 {
-    text-align: center;
 
+.wrap1 {
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin : auto;
+    width : 1280px;
+    
 }
+
+
+.about_detail{
+    margin-top: 30px;
+    }
