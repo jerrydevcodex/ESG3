@@ -126,3 +126,19 @@ h1{
 .contact-form> button{
     margin-top: 20px;
 }
+
+.footer_list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.footer_content{
+    margin-left: 20px;
+    text-align: right;
+}
+
+.footer_logo{
+    padding:40px;
+}
