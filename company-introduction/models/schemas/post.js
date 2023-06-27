@@ -3,7 +3,7 @@ const { Schema } = require('mongoose');
 const PostSchema = new Schema({
   number: {
     type: Number,
-    required: true,
+    required: false,
   }
   ,
   title: {

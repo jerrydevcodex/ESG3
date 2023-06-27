@@ -1,8 +1,20 @@
+import { useState, useEffect } from 'react';
 import Nav from './Nav';
 import axios from 'axios';
 
-const Notice = () => {
-    const posts = axios.get('/notice');
+function Notice(){
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+        axios.get('http://localhost:8080/notice')
+                        .then((res) => {
+                            console.log(res);
+                            setData(res.data);
+                        });
+    }, [])
+    if (!data) {
+        return <div>loading...</div>;
+    }
     return (
         <div className="notice">
             <div class="intro_bg">
@@ -10,23 +22,24 @@ const Notice = () => {
             <h1>공지사항</h1>
             <table>
                 <tr>
-                    <th>{posts.number}</th>
-                    <th>{posts.title}</th>
-                    <th>{posts.author}</th>
-                    <th>{posts.timestamps}</th>
+                    <th><strong>번호</strong></th>
+                    <th><strong>제목</strong></th>
+                    <th><strong>작성자</strong></th>
+                    <th><strong>날짜</strong></th>
                 </tr>
-                <tr>
-                    <td>1</td>
-                    <td>공지사항입니다.</td>
-                    <td>관리자</td>
-                    <td>2021-09-01</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>공지사항입니다.</td>
-                    <td>관리자</td>
-                    <td>2021-09-01</td>
-                </tr>
+                {data.map((item) => {
+                        return (
+                            <tr>
+                                <td>{item._id}</td>
+                                <td>{item.title}</td>
+                                <td>{item.content}</td>
+                                <td>{item.createdAt}</td>
+                            </tr>
+                        )
+                    })}
+                <button onClick={() => {
+                    window.location.href = '/edit';
+                }}>작성하기</button>
                 </table>
         </div>
             

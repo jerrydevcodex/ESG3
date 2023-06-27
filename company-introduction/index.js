@@ -27,8 +27,8 @@ app.get('/notice', async (req, res) => {
 })
 
 app.post('/notice', async (req, res) => {
-  const post = await Post.create(req.body);
-  res.json(post);
+  await Post.create(req.body);
+  res.json('post created');
 })
 
 
