@@ -70,6 +70,7 @@ h1{
     margin-right: 450px;
     margin-top : 20px;
     margin-bottom: 10px;
+    
 }
 
 .amount{
@@ -111,6 +112,7 @@ footer {
     justify-content: center;
     align-items: center;
     list-style: none;
+    margin-bottom: 125px;
 }
 
 .footer_content{
@@ -119,7 +121,8 @@ footer {
 }
 
 .footer_logo{
-    padding:40px;
+    float:left;
+    margin-right: 157px;
 }
 
 /* 호버 효과 */

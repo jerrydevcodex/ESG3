@@ -132,6 +132,8 @@ h1{
     justify-content: center;
     align-items: center;
     list-style: none;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .footer_content{
@@ -140,7 +142,8 @@ h1{
 }
 
 .footer_logo{
-    padding:40px;
+    float:left;
+    margin-right: 157px;
 }
 
 /* 호버 효과 */
@@ -153,3 +156,6 @@ h1{
     color: #000;
     
 }
+
+
+

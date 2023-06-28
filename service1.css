@@ -17,7 +17,8 @@ body{
     float: left;
     margin-right: 450px;
     margin-top : 20px;
-    margin-bottom: 10px;}
+    margin-bottom: 10px;
+}
 
 
 h1{
@@ -131,6 +132,7 @@ h1{
         align-items: center;
         list-style: none;
         margin-top: 50px;
+        margin-bottom: 50px;
     }
     
     .footer_content{
@@ -139,7 +141,8 @@ h1{
     }
     
     .footer_logo{
-        padding:40px;
+        float:left;
+        margin-right: 157px;
     }
 
     /* 호버 효과 */
@@ -183,15 +186,19 @@ h1{
     justify-items: center;
     flex-direction: row;
     text-align: center;
- }
+     }
+
+
+
+
 
  .searchform>input{
     width: 400px;
     height: 40px;
     text-align: center;
  }
-
  .searchform>button{
-    width:40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
  }
+
