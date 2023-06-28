@@ -1,7 +1,10 @@
 
 import './App.css';
 import './style.css';
-import Nav from './components/Nav';
+import Home from './pages/Home';
+import About from './pages/about';
+import Service from './pages/Service';
+import Contact from './pages/Contact';
 import Notice from './pages/Notice';
 import Edit from './pages/Edit';
 import Detail from './pages/Detail';
@@ -16,8 +19,8 @@ function App() {
           <Route path="/" element={<Home/>}/>
           <Route path="/notice" element={<Notice/>}/>
           <Route path="/about" element={<About/>}/>
-          <Route path="/service" element={<Home/>}/>
-          <Route path="/contact" element={<Home/>}/>
+          <Route path="/service" element={<Service/>}/>
+          <Route path="/contact" element={<Contact/>}/>
           <Route path="/edit" element={<Edit/>}/>
           <Route path="/notice/:id/detail" element={<Detail/>}/>
           <Route path="*" element={<NotFound />} />
@@ -30,32 +33,5 @@ function App() {
 export default App;
 
 
-const Home = () => {
-  return (
-    <body>
-    <div className="wrap">
-        <div className="intro_bg">
-            <Nav/>
-            
-        </div>
-    </div>
-    <footer>
-        <p> 여기에 푸터를 넣을거에요</p>
 
-    </footer>
-    </body>
-  )
-}
-
-
-const About = () => {
-  return (
-    <div>
-      <div className="intro_bg">
-            <Nav/>
-            <h1>ABOUT</h1>
-        </div>
-    </div>
-  )
-}
 
