@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 const Nav = () => {
     return (
-        <div class="header">
-                <ul class="nav">
-                    <img class = "logo" src={logo} alt="logo"/>
+        <div className="header">
+                <ul className="nav">
+                    <img className = "logo" src={logo} alt="logo"/>
                     <li><Link to='/'>HOME</Link></li>
                     <li><Link to='/notice'>NOTICE</Link></li>
                     <li><Link to='/about'>ABOUT</Link></li>

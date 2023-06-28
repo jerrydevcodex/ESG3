@@ -29,8 +29,8 @@ export default App;
 const Home = () => {
   return (
     <body>
-    <div class="wrap">
-        <div class="intro_bg">
+    <div className="wrap">
+        <div className="intro_bg">
             <Nav/>
             
         </div>
@@ -47,7 +47,7 @@ const Home = () => {
 const About = () => {
   return (
     <div>
-      <div class="intro_bg">
+      <div className="intro_bg">
             <Nav/>
             <h1>ABOUT</h1>
         </div>

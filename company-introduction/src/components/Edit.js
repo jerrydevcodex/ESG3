@@ -31,10 +31,11 @@ const Edit = () => {
                     })
                     .then(function (response) {
                         console.log(response);
-                        window.location.href = '/notice';
                     })
                     .catch(function (error) {
                         console.log(error);
+                    }).then( () => {
+                        window.location.href = '/notice';
                     });
                 }}>작성하기</button>
             </form>

@@ -9,7 +9,15 @@ app.use(express.json());
 
 app.use(cors());
 
+// app.use(express.static(path.join(__dirname, '/build')));
 
+// app.get('/', (res, req) => {
+//   req.sendFile(path.join(__dirname, '/build/index.html'));
+// });
+
+// app.get('*', (res, req) => {
+//   req.sendFile(path.join(__dirname, '/build/index.html'));
+// });
 
 mongoose.connect("mongodb://127.0.0.1/company-introduction");
 
@@ -26,8 +34,8 @@ app.get('/notice', async (req, res) => {
   res.json(posts);
 })
 
-app.post('/notice', async (req, res) => {
-  await Post.create(req.body);
+app.post('/notice', (req, res) => {
+  Post.create(req.body);
   res.json('post created');
 })
 
