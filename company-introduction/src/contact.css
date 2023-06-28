@@ -11,7 +11,41 @@ body{
     background-image: url(bg.png);
     background-size: cover;
     background-repeat: none;
-    background-position: center center;}
+    background-position: center center;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    line-height: 86px;
+    width: 100%;
+    margin-right: 35px;
+}
+
+
+
+.nav > li{
+    margin-left: 84px;
+}
+
+.nav > li > a {
+    color : #000;
+}
+
+.searcharea{
+    width : 100%;
+    text-align: center;
+    font-weight: lighter;
+    margin-top: 20px;
+    }
+
+
+.logo{
+    float: left;
+    margin-right: 450px;
+    margin-top : 20px;
+    margin-bottom: 10px;}
+
 
 h1{
     font-size : 48px;
@@ -24,13 +58,13 @@ h1{
 }
 
 
-.intro_bg{
+/*.intro_bg{
     background-image: url("bg.png");
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     height: 600px;    
-}
+}*/
 .header{
     display : flex;
     width : 1280px ;
@@ -53,58 +87,44 @@ h1{
 .nav > li > a {
     color : #000;
 }
-.intro_txt{
-    width : 100%;
-    margin : 110px auto 110px auto;
+.contact-section {
     text-align: center;
+    padding: 50px;
 }
 
-.intro_txt > h1,
-.intro_txt > h4{
-    color : #000;
+.contact-info {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    }
+.contact-info > h3{
+    margin-bottom: 5px;
 }
 
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
 
-.logo{
-    float: left;
-    margin-right: 450px;
-    margin-top : 20px;
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #3d4be8;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form>h3{
     margin-bottom: 10px;
-    
 }
-
-.amount{
-    display: flex;
-    width : 1280px;
-    background :white;
-    margin : auto;
-    box-shadow: -5px 10px 10px rgba(0,0,0,0.5);
-}
-.amount > li {
-    flex : 1;
-    height: 132px;
-    background-color : rgb(83, 89, 255);
-}
-.amount > li > div {
-    text-align: center;
-    margin-top: 37px;
-    height: 57px;
-}
-.amount >li:not(:last-child)>div{
-    border-right : 1px solid #E1E1E1;
-}
-.amount_txt{
-    font-size : 20px;
-    font-weight : lighter;
-    color : white;
-}
-.amount_txt2{
-    font-size: 24px;
-    color : white;
-}
-footer {
-    width : 100% ;
-    margin-top: 125px;
+.contact-form> button{
+    margin-top: 20px;
 }
 
 .footer_list{
@@ -112,7 +132,8 @@ footer {
     justify-content: center;
     align-items: center;
     list-style: none;
-    margin-bottom: 125px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .footer_content{
@@ -135,3 +156,6 @@ footer {
     color: #000;
     
 }
+
+
+
