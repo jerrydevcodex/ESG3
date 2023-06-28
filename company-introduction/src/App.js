@@ -2,8 +2,10 @@
 import './App.css';
 import './style.css';
 import Nav from './components/Nav';
-import Notice from './components/Notice';
-import Edit from './components/Edit';
+import Notice from './pages/Notice';
+import Edit from './pages/Edit';
+import Detail from './pages/Detail';
+import NotFound from './pages/NotFound';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
           <Route path="/service" element={<Home/>}/>
           <Route path="/contact" element={<Home/>}/>
           <Route path="/edit" element={<Edit/>}/>
+          <Route path="/notice/:id/detail" element={<Detail/>}/>
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
     </div>

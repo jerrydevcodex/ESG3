@@ -39,5 +39,17 @@ app.post('/notice', (req, res) => {
   res.json('post created');
 })
 
+app.delete('/notice/:id', async (req, res) => {
+  const { id } = req.params;
+  await Post.findByIdAndDelete(id);
+  res.json('post deleted');
+});
+
+app.get('/notice/:id', async (req, res) => {
+  const { id } = req.params;
+  const post = await Post.findById(id);
+  res.json(post);
+})
+
 
 app.listen(8080);

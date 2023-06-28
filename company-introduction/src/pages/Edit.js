@@ -1,9 +1,12 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // { useNavigate
 import axios from 'axios';
 
 const Edit = () => {
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
+    const navigate = useNavigate();
+
     return (
         <div>
             <h1>공지사항 수정</h1>
@@ -29,14 +32,10 @@ const Edit = () => {
                         title: title,
                         content: content,
                     })
-                    .then(function (response) {
-                        console.log(response);
-                    })
+                    .then(navigate('/notice'))
                     .catch(function (error) {
                         console.log(error);
-                    }).then( () => {
-                        window.location.href = '/notice';
-                    });
+                    })
                 }}>작성하기</button>
             </form>
         </div>

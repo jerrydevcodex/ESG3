@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react';
-import Nav from './Nav';
+import Nav from '../components/Nav';
 import axios from 'axios';
+import { useNavigate, Link } from 'react-router-dom';
+import NoticeList from '../components/NoticeList';
 
 function Notice(){
     const [db, setDb] = useState([]); // data를 배열로 받아옴
+    const navigate = useNavigate();
     useEffect(() => {
         axios
             .get('http://localhost:8080/notice')
@@ -11,9 +14,7 @@ function Notice(){
                 setDb(res.data);
             });
     }, [])
-    console.log(db.map((data) => {
-        return data.title;
-    }));
+    
     return (
         <div className="notice">
             <div className="intro_bg">
@@ -27,15 +28,9 @@ function Notice(){
                     <th><strong>작성자</strong></th>
                     <th><strong>날짜</strong></th>
                 </tr>
-                {console.log(db)}
                 {db.map((data) => {
                     return (
-                        <tr>
-                            <td>{data._id}</td>
-                            <td>{data.title}</td>
-                            <td>{data.content}</td>
-                            <td>{data.createdAt}</td>
-                        </tr>
+                        <NoticeList data={data}/>
                     );
                 })}
                 
