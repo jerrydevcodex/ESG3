@@ -16,7 +16,11 @@ const PostSchema = new Schema({
   },
   author: {
     type: String,
-    required: false,
+    required: true,
+  },
+  password: {
+    type: String,
+    required: true,
   }
 }, {
   timestamps: true,
