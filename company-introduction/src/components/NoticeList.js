@@ -9,11 +9,17 @@ const NoticeList = ({ data }) => {
                             <td>{!data.author ? "익명" : data.author}</td>
                             <td>{data.createdAt}</td>
                             <td><button onClick={() => {
-                                axios.delete('http://localhost:8080/notice/' + data._id)
+                                let userInput = prompt("비밀번호를 입력하세요!"+"");
+                                if(userInput == data.password){
+                                    axios.delete('http://localhost:8080/notice/' + data._id)
                                 .then(window.location.reload())
                                 .catch(function (error) {
                                     console.log(error);
                                 })
+                                }else{
+                                  alert("비밀번호가 아닙니다.");      
+                                }
+                                
                             } }>삭제</button></td>
                         </tr>
     )
