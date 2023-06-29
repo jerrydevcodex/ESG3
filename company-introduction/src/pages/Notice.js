@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Nav from '../components/Nav';
 import axios from 'axios';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import NoticeList from '../components/NoticeList';
 
 function Notice(){
@@ -38,7 +38,7 @@ function Notice(){
                 
                 </table>
                 <button onClick={() => {
-                    window.location.href = '/edit';
+                    navigate('/edit');
                 }}>작성하기</button>
         </div>
             
