@@ -9,7 +9,7 @@ function Notice(){
     const navigate = useNavigate();
     useEffect(() => {
         axios
-            .get('http://localhost:8080/notice')
+            .get('http://localhost:8080/noticedb')
             .then((res) => {
                 setDb(res.data);
             });
