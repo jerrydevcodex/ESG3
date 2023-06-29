@@ -23,7 +23,7 @@ mongoose.connect("mongodb://127.0.0.1/company-introduction");
 
 mongoose.connection.on("connected", () => {
   console.log("Successfully connected to MongoDB");
-})
+});
 
 app.get('/', (req, res) => {
   res.send("OK");
@@ -32,12 +32,12 @@ app.get('/', (req, res) => {
 app.get('/notice', async (req, res) => {
   const posts = await Post.find({});
   res.json(posts);
-})
+});
 
 app.post('/notice', (req, res) => {
   Post.create(req.body);
   res.json('post created');
-})
+});
 
 app.delete('/notice/:id', async (req, res) => {
   const { id } = req.params;
@@ -49,7 +49,17 @@ app.get('/notice/:id', async (req, res) => {
   const { id } = req.params;
   const post = await Post.findById(id);
   res.json(post);
-})
+});
+
+app.put('/notice/:id', async (req, res) => {
+  const { id } = req.params;
+  const { title, content } = req.body;
+  await Post.findByIdAndUpdate(id, {
+    title: title,
+    content: content,
+  });
+  res.json('post updated');
+});
 
 
 app.listen(8080);
