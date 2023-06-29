@@ -1,11 +1,14 @@
 import logo from '../static/002.png';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
         <footer>
           <ul class = "footer_list">
               <li>
-                  <img class = "footer_logo" src={logo} alt = "logo"/>
+                <Link to='/'><img class = "footer_logo" 
+                src={logo} alt = "logo"/></Link>
+                  
               </li>
               <li class = "footer_content">
                   <h4>(주) ESG3조 컴퍼니</h4>

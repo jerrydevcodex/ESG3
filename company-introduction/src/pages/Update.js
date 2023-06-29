@@ -4,7 +4,7 @@ import axios from "axios";
 
 const Update = () => {
     const { id } = useParams();
-    const [ db, setDb ] = useState([]); 
+    
     const [ title, setTitle ] = useState("");
     const [ content, setContent ] = useState("");
      
@@ -13,11 +13,11 @@ const Update = () => {
         axios
             .get('http://localhost:8080/notice/'+id)
             .then((res) => {
-                setDb(res.data);
+                
                 setTitle(res.data.title);
                 setContent(res.data.content);
             });
-    }, [])
+    }, [id])
     
     return (
         <div>
@@ -40,6 +40,9 @@ const Update = () => {
                     console.log(error);
                 })
             }}>확인</button>
+            <button onClick={() => {
+                navigate('/notice');
+            }}>목록으로</button>
         </div>
     )
 }

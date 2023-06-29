@@ -5,7 +5,9 @@ const Nav = () => {
     return (
         <div className="header">
                 <ul className="nav">
-                    <img className = "logo" src={logo} alt="logo"/>
+                    <Link to='/'><img className = "logo" 
+                    src={logo} alt="logo"/></Link>
+                    
                     <li><Link to='/'>HOME</Link></li>
                     <li><Link to='/notice'>NOTICE</Link></li>
                     <li><Link to='/about'>ABOUT</Link></li>
