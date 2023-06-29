@@ -13,7 +13,7 @@ const Detail = () => {
             .then((res) => {
                 setDb(res.data);
             });
-    }, [])
+    }, [id])
 
     return (
         <div>
@@ -21,8 +21,11 @@ const Detail = () => {
             <h2>{db.title}</h2>
             <p>{db.content}</p>
             <button onClick={() => {
-                navigate('/edit/'+id, {replace: true});
+                navigate('/edit/'+id);
             }}>수정</button>
+            <button onClick={() => {
+                navigate('/notice');
+            }}>목록으로</button>
         </div>
     )
 }

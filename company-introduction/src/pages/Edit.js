@@ -46,11 +46,11 @@ const Edit = () => {
                     }}/>
                 </div>
                 <button type="submit" onClick={() => {
-                    if(author == ''){
+                    if(author === ''){
                         alert('작성자를 입력하세요.');
                         return;
                     }
-                    if(password == ''){
+                    if(password === ''){
                         alert('비밀번호를 입력하세요.');
                         return;
                     }
@@ -65,6 +65,9 @@ const Edit = () => {
                         console.log(error);
                     })
                 }}>작성하기</button>
+                <button onClick={() => {
+                    navigate('/notice');
+                }}>목록으로</button>
             </form>
         </div>
     )
